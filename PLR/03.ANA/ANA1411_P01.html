@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 보험진단안내 | 보장분석 결과 | 고객목록 | 보장분석</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>보험진단 안내</h1>
+			<button type="button" data-btn="pop-close">보험진단 안내 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!-- ######################### -->
+			<!-- [안내문구] -->
+			<!-- ######################### -->
+            <div class="area-terms">
+                <dl class="t1">
+                    <dt>1. 보험진단 분석 대상</dt>
+                    <dd>회사별 계약 및 담보현황은 한국신용정보원 기준 생명보험 2000년 4월, 손해보험 2002년 12월 이후 정상계약에 한하여 조회되며, 보험진단 종합점수는 당사의 보장분석 담보 기준으로 산출되었습니다.</dd>
+                </dl>
+                <dl class="t2">
+                    <dt>2. 보험진단 종합점수 기준</dt>
+                    <dd>※ 산정 기준 : 당사 보장분석 46개 담보기준 우선순위 부여 후, 점수 산출.<br>예) 암, 2대 진단비(뇌혈관, 허혈성심장질환) / 실손의료비 / 운전자 담보 등 : 1순위</dd>
+                </dl>
+            </div>
+
+            <div class="area-progress1 box" data-value="4" style="--el-progress:4;">
+				<strong>0~39점 : 부족해요</strong>
+				<!-- 2022-11-16 점수 추가 -->
+				<div>
+					<span>0</span>
+					<span>100</span>
+				</div>
+				<!-- //2022-11-16 점수 추가 -->
+				<span>
+					<em>4</em>점
+				</span>
+			</div>
+
+			<!-- [샘플] 40 ~ 59 : 아쉬워요 -->
+			<div class="area-progress1 box" data-value="50" style="--el-progress:50;">
+				<strong>40~59점 : 아쉬워요</strong>
+				<!-- 2022-11-16 점수 추가 -->
+				<div>
+					<span>0</span>
+					<span>100</span>
+				</div>
+				<!-- //2022-11-16 점수 추가 -->
+				<span><em>50</em>점</span>
+			</div>
+
+			<!-- [샘플] 60 ~ 79 : 좋아요 -->
+			<div class="area-progress1 box" data-value="76" style="--el-progress:76;">
+				<strong>60~79점 : 좋아요</strong>
+				<!-- 2022-11-16 점수 추가 -->
+				<div>
+					<span>0</span>
+					<span>100</span>
+				</div>
+				<!-- //2022-11-16 점수 추가 -->
+				<span><em>76</em>점</span>
+			</div>
+
+			<!-- [샘플] 80 ~ 100 : 훌륭해요 -->
+			<div class="area-progress1 box" data-value="92" style="--el-progress:92;">
+				<strong>80~100점 : 훌륭해요</strong>
+				<!-- 2022-11-16 점수 추가 -->
+				<div>
+					<span>0점</span>
+					<span>100점</span>
+				</div>
+				<!-- //2022-11-16 점수 추가 -->
+				<span><em>92</em>점</span>
+			</div>
+		</div>
+	</article>
+</div>
+</body>
+</html>

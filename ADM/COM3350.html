@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>RM 권한관리 리스트 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220513">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- ############################## -->
+	<!-- [HEADER] -->
+	<!-- ############################## -->
+	<div id="header"></div>
+	<h2 class="page-title">RM 권한관리 상세</h2>
+	<!-- ############################## -->
+	<!-- [CONTAINER] -->
+	<!-- ############################## -->
+	<div id="container">
+		<!-- ### [LNB] ### -->
+		<div class="aside"></div>
+
+		<!-- ### [CONTENTS] ### -->
+		<div class="contents">
+            <div class="sub">
+                <button type="button" class="btn-action c3">목록</button>
+            </div>
+			<div class="tbl-write1">
+				<table>
+                    <colgroup>
+                        <col style="width:150px;">
+                        <col>
+                        <col style="width:150px;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">기준월</th>
+                            <td>
+								<div class="form-row">
+									<select class="selectbox" style="width:150px;">
+										<option>2023.01</option>
+									</select>
+								</div>
+							</td>
+                            <th scope="row">등록자</th>
+                            <td>김크림(****4)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">직원</th>
+                            <td>
+								<div class="form-row">
+									<input type="text" class="text" style="width:150px;" value="이름" disabled>
+									<input type="number" class="text" style="width:150px;" placeholder="사번">
+									<button type="button" class="btn-sub1 c1">검색</button>
+								</div>
+							</td>
+                            <th scope="row">등록일자</th>
+                            <td>YYYY.MM.DD</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">권한설정</th>
+                            <td colspan="3">
+								<div class="tbl-flexbox">
+									<div class="form-row">
+										<strong>사업단</strong>
+										<div>
+											<div>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												
+											</div>
+										</div>
+									</div>
+									<div class="form-row">
+										<strong>지점</strong>
+										<div>
+											<div>
+												<label class="label-check">
+													<input type="checkbox" checked>
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+												<label class="label-check">
+													<input type="checkbox">
+													<span>답변대기</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</td>
+                        </tr>
+                    </tbody>
+                </table>
+			</div>
+			<!-- 2023-02-02 삭제 -->
+			<!-- <div class="area-btn2">
+				<button type="button" class="btn-action c3">권한추가</button>
+			</div> -->
+			<!-- //2023-02-02 삭제 -->
+			<div class="area-action">
+				<button type="button" class="btn-action c3">취소</button>
+				<button type="button" class="btn-action c1">저장</button>
+				<!-- <button type="button" class="btn-action c1">삭제</button> --> <!-- 2023-02-02 삭제 -->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

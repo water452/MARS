@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>설치가이드</title>
+<link rel="stylesheet" href="../../resource/css/common.css">
+<link rel="stylesheet" href="../../resource/css/content.css">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-06]	1. 약관 내용 전체 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>영업지원 앱 설치</h1>
+			<button type="button" data-btn="pop-close">영업지원 앱 설치 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container etc">
+            <div class="step-txt-type">
+                <div class="type-head">
+                    <strong class="round-box">STEP 1</strong>
+                    <h2 class="step-tit big">앱 설치부터 기기권한 설정까지의 단계예요.</h2>
+                </div>
+
+                <!-- s: iOS -->
+                <div class="type-body">
+                    <ol>
+                        <li>
+                            <strong>1. 앱 다운로드</strong>
+                            <span>하단 app 다운로드 버튼을 눌러 영업지원앱을 다운받으세요.</span>
+                            <p class="imgs etc"><img src="../../resource/img/cnd/intro/img_ios_con_01.png" alt=""></p>
+                            <p class="subs">파일 다운로드가 진행 중일 경우, <br>홈화면에 영업지원앱이 등장하며 다운로드 진행 상황을 확인할 수 있어요.</p>
+                        </li>
+                        <li>
+                            <strong>2. 설정선택</strong>
+                            <span>설정에서 신뢰 등록을 진행해주세요.</span>
+                            <p class="imgs etc"><img src="../../resource/img/cnd/intro/img_ios_con_02.png" alt=""></p>
+                            <span>앱을 실행하면 신뢰 등록이 되어있지 않다는 문구가 등장해요. 취소를 누르고 설정으로 이동해주세요.</span>
+                            <p class="imgs etc"><img src="../../resource/img/cnd/intro/img_ios_con_03.png" alt=""></p>
+                            <p class="subs">신뢰 등록이 완료되면 홈화면으로 이동해주세요.</p>
+                        </li>
+                        <li>
+                            <strong>3. 앱 접근 권한 허용</strong>
+                            <span>영업지원앱을 눌러 실행한 후 각 접근 권한을 허용하여 설치를 완료해주세요.</span>
+                            <p class="imgs"><img src="../../resource/img/cnd/intro/img_ios_con_04.png" alt=""></p>
+                        </li>
+                    </ol>
+                </div>
+                <!-- e: iOS -->
+            </div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">APP 다운로드</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>

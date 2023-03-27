@@ -1,0 +1,18 @@
+<svg id="logo_대신증권_24px" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4e4d4d;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="패스_1506908" data-name="패스 1506908" class="cls-1" d="M12,0A12,12,0,1,1,0,12,12,12,0,0,1,12,0Z"/>
+  <g id="그룹_628163" data-name="그룹 628163" transform="translate(13664 18599)">
+    <path id="패스_1506909" data-name="패스 1506909" class="cls-2" d="M559.374,241.33h-3.335v6.336h6.667l3.333-3.334h-6.665Z" transform="translate(-14213.039 -18829.668)"/>
+    <path id="패스_1506910" data-name="패스 1506910" class="cls-2" d="M559.374,184.947l-3.335,3.333h6.667v3h3.333v-6.336Z" transform="translate(-14213.039 -18776.947)"/>
+  </g>
+</svg>

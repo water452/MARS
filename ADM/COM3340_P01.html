@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P]일괄등록 | ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220513">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+<script type="text/javascript" src="../resource/js/freeze-table.js"></script>
+</head>
+<body>
+<div id="popup" class="ie">
+	<div class="pop-header">
+		<h1>일괄등록</h1>
+		<button type="button" class="pop-close" onclick="window.close();">팝업 닫기</button>
+	</div>
+	<div class="pop-content">
+		<div class="tbl-write1">
+            <table>
+                <colgroup>
+                    <col style="width:150px;">
+                    <col>
+                </colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">기준월</th>
+						<td>
+							<div class="form-row">
+								<select name="" id="" class="selectbox" style="min-width:120px;">
+									<option value="">2023.01</option>
+								</select>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">등록자</th>
+						<td>
+                            <div class="form-row">
+                                <input type="text" class="text" value="김크림(****3)" disabled>
+                            </div>
+                        </td>
+					</tr>
+                    <tr>
+						<th scope="row">등록일자</th>
+						<td>
+                            <div class="form-row">
+                                <input type="text" class="text" value="YYYY.MM.DD" disabled>
+                            </div>
+                        </td>
+					</tr>
+					<tr>
+						<th scope="row">첨부하기</th>
+						<td>
+							<div class="form-row ">
+                                <input type="text" class="text" name="" id="" value="" placeholder="" style="width:200px">
+								<span class="wrap-file">
+									<input type="file" tabindex="-1">
+									<button type="button" onclick="$(this).prev('input').trigger('click');" class="btn-sub1 ic1">첨부하기</button>
+								</span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="data-table1">
+			<div class="info1">
+				현재 조회된 건수: 21건
+				<span class="bar"></span>
+				단위 : 천원
+				<div class="tooltip right2">
+					<button type="button"></button>
+					<div class="tooltip-layer">
+						<ul class="list-dot1">
+							<li>실가동: 장기신규 1건 이상</li>
+							<li>유실적: 장기인보험 누계 5만원 이상</li>
+							<li>Core: 장기인보험 누계 20만원 이상</li>
+							<li>상세지침은 제규정 참고</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="list-table" style="height: 590px;">
+				<table>
+					<colgroup>
+						<col style="width:60px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:80px;">
+						<col style="width:60px;">
+						<col style="width:90px;">
+						<col style="width:60px;">
+						<col style="width:90px;">
+						<col style="width:60px;">
+						<col style="width:90px;">
+						<col style="width:60px;">
+						<col style="width:60px;">
+						<col style="width:60px;">
+						<col style="width:60px;">
+						<col style="width:100px;">
+						<col style="width:100px;">
+						<col style="width:100px;">
+						<col style="width:100px;">
+						<col style="width:100px;">
+						<col style="width:100px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" rowspan="3">No</th>
+							<th scope="col" rowspan="3">사업단</th>
+							<th scope="col" rowspan="2">지점</th>
+							<th scope="col" rowspan="2">LP명</th>
+							<th scope="col" rowspan="2">위촉일자</th>
+							<th scope="col" rowspan="2">전속/교차</th>
+							<th scope="col" rowspan="2">경력구분</th>
+							<th scope="col" rowspan="2">성별</th>
+							<th scope="col" colspan="9">당월장기신규</th>
+							<th scope="col" rowspan="3">일반</th>
+							<th scope="col" colspan="3">자동차</th>
+							<th scope="col">계속분</th>
+							<th scope="col" rowspan="3">총량</th>
+						</tr>
+						<tr>
+							<th scope="col" colspan="2">월납</th>
+							<th scope="col" colspan="2">보장성</th>
+							<th scope="col" colspan="2">재물</th>
+							<th scope="col" rowspan="2">실가동</th>
+							<th scope="col" rowspan="2">유실적</th>
+							<th scope="col" rowspan="2">Core</th>
+							<th scope="col" rowspan="2">당사갱신</th>
+							<th scope="col" rowspan="2">신규타사</th>
+							<th scope="col" rowspan="2">계</th>
+							<th scope="col" rowspan="2">당월</th>
+						</tr>
+						<tr>
+							<th scope="col">팀</th>
+							<th scope="col">코드</th>
+							<th scope="col">해촉일자</th>
+							<th scope="col">직책</th>
+							<th scope="col">차월</th>
+							<th scope="col">나이</th>
+							<th scope="col">원수</th>
+							<th scope="col">판매건수</th>
+							<th scope="col">원수</th>
+							<th scope="col">판매건수</th>
+							<th scope="col">원수</th>
+							<th scope="col">판매건수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td rowspan="2">1</td>
+							<td rowspan="2">드림사업단</td>
+							<td>드림1지점</td>
+							<td>대한강일대리점</td>
+							<td>2022.02.22</td>
+							<td>전속</td>
+							<td>경력</td>
+							<td>여</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2">7,333</td>
+							<td rowspan="2">2</td>
+							<td rowspan="2" class="point1">Y</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2" class="point1">N</td>
+							<td rowspan="2">0</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+							<td rowspan="2">1,000,000</td>
+						</tr>
+						<tr>
+							<td>드림1-1팀</td>
+							<td>1231231</td>
+							<td>2222.22.22</td>
+							<td>12312341</td>
+							<td>436</td>
+							<td>62</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="total-div" data-pos="bottom" data-match="false">
+				<div class="total-btns">
+					<div class="btns2">
+						<button type="button" class="btn-sub1 c3">다음</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="area-action">
+			<button type="button" class="btn-action c2">저장</button>
+		</div>
+	</div>
+</div>
+<script>
+	$(".list-table").freezeTable({
+		'scrollable': true,
+		'columnNum' : 8,
+	});
+	// 23-01-27 함수 추가
+	function headerFix(){
+		if(!$(".list-table").scrollTop() == 0){
+			$(".list-table").scrollTop($(".list-table").scrollTop() + 1);
+		}
+	}
+	headerFix();
+</script>
+</body>
+</html>

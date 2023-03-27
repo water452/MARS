@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>[P] 은행선택 | 선택/입력 | 공통컨텐츠</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>은행선택</h1>
+			<button type="button" data-btn="pop-close">은행선택 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container">
+			<!--
+				 <p class="tit-section t1">가상계좌를 발급할 은행을 선택해 주세요.</p>
+				농협은행 011
+				신한(통합) 088
+				국민은해 004
+				우리은행 020
+				하나은행 081
+				기업은행 003
+				외환은행 005
+				수협중앙회 007
+				SC은행 023
+				씨티은행 027
+				대구은행 031
+				부산은행 032
+				광주은행 034
+				제주은행 035
+				전북은행 037
+				경남은행 039
+				새마을금고중앙회 045
+				신협중앙회 048
+				상호저축은행 050
+				우체국 071
+				산업은행 002
+				케이뱅크 089
+				한국카카오은행 090
+				토스뱅크 092
+				산업은행 002
+				상호저축은행 037
+
+				유안타증권 209
+				KB증권 218
+				미래에셋대우증권 238
+				삼성증권 240
+				한국투자증권 243
+				NH투자증권 247
+				교보증권 261
+				하이투자증권 262
+				에이치엠씨투자증권 263
+				키움증권 264
+				이베스트증권 265
+				에스케이증권 266
+				대신증권 267
+				한화투자증권 269
+				하나금융투자증권 270
+				신한금융투자증권 278
+				DB금융투자증권 279
+				유진투자증권 280
+				메리츠증권 287
+				부국증권 290
+				신영증권 291
+				케이프투자증권 292
+				골든브릿지투자증권 221
+				한양증권 222
+				리딩투자증권 223
+				BNK투자증권 224
+				KTB투자증권 227
+				모건스탠리은행 052
+				HSBC은행 054
+				도이치은행 055
+				알비에스피엘시은행 056
+				제이피모간체이스은행 057
+				미즈호은행 058
+				미쓰비시도쿄UFJ은행 059
+				BOA은행 060
+				비엔피파리바은행 061
+				산림조합중앙회 064
+				중국공상은행 062
+				엔에이치투자증권 289
+				지역농.축협 012
+				신한은행(구_조흥) 021
+				신한(구_신한) 026
+				카카오페이증권 288
+				외국은행 999
+			 -->
+			<div class="list-t2">
+				<ul>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1" checked>
+							<span class="BKCD_011">농협은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_088">신한(통합)</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_004">국민은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_020">우리은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_081">하나은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_003">기업은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_005">외환은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_007">수협</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_023">SC은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_027">씨티은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_031">대구은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_032">부산은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_034">광주은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_035">제주은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_037">전북은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_039">경남은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_045">새마을금고</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_048">신협</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_071">우체국</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_090">카카오뱅크</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_092">토스뱅크</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_240">삼성증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_089">케이뱅크</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_002">산업은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="BKCD_050">상호저축은행</span>
+						</label>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+
+			<br>
+			<!-- 증권 -->
+			<div class="list-t2">
+				<ul>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1" checked>
+							<span class="STCD_209">유안타증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_218">KB증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_238">미래에셋대우증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_240">삼성증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_243">한국투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_247">NH투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_261">교보증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_262">하이투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_263">HMC투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_264">키움증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_265">이베스트증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_266">SK증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_267">대신증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_269">한화투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_270">하나금투</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_278">신한금투</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_279">DB금투</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_280">유진투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_287">메리츠증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_290">부국증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_291">신영증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_292">케이프투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_221">골든브릿지투자</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_222">한양증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_223">리딩투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_224">BNK투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_227">KTB투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_052">모건스탠리은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_054">HSBC은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_057">JP모간은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_056">RBSPLC은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_059">미쓰비시은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_058">미즈호은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_061">BNP파리바은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_060">BOA은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_062">중국공상은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_064">산림조합중앙회</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_012">지역농축협</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_289">NH투자증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_021">신한(구.조흥)</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_026">신한(구.신한)</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_">외국은행</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_288">카카오페이증권</span>
+						</label>
+					</li>
+					<!-- // -->
+					<li>
+						<label>
+							<input type="radio" name="btnRadio1">
+							<span class="STCD_055">도이치은행</span>
+						</label>
+					</li>
+					<!-- // -->
+				</ul>
+			</div>
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">확인</button>
+				<!-- 비활성화 시 -->
+				<!-- <button type="button" class="btn-action c1" disabled>확인</button> -->
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

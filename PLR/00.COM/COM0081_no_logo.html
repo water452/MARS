@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>로딩</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<main id="wrapper">
+	<!-- -------------------------------------- -->
+	<!-- # [HEADER] 페이지 타이틀 -->
+	<!-- -------------------------------------- -->
+	<!-- <header class="header">
+		<h1 class="hide">로그인</h1>
+	</header> -->
+
+	<!-- -------------------------------------- -->
+	<!-- # [CONTAINER] 컨텐츠 -->
+	<!-- -------------------------------------- -->
+	<!-- 페이지 로띄울경우 -->
+	<div class="container" data-page="7">
+		<div class="loading-wrap">
+			<div style="padding-top:2.5rem;">
+				<strong>요청하신 환급금을 조회하고 있어요.</strong>
+				<p>최대 1분까지 소요될 수 있어요.</p>
+				<em class="progree-num">100</em> <!-- 텍스트 입력시 %티지 변경 -->
+				<div class="loader2"></div>
+			</div>
+		</div>
+	</div>
+	<!-- -------------------------------------- -->
+</main>
+<!-- ######################### -->
+<!-- [로딩영역 페이지안에 컨텐츠로 띄울경우] -->
+<!-- ######################### -->
+<!-- <div class="loading-wrap">
+	<div>
+		<img src="../../resource/img/publish/let_sublogo.png" alt="let로고" class="animate__animated animate__bounce animate__infinite">
+		<strong>요청하신 업무를 처리하고 있어요.</strong>
+		<p>잠시만 기다려주세요!</p>
+			<div class="progress-bar" >
+				<div class="progress-bar-bg" style="--progress:100;">
+					<div class="progress-bar-progress">
+					</div>
+				</div>
+			</div>
+		<em class="progree-num">100</em> <!-- 텍스트 입력시 %티지 변경 -->
+	</div>
+</div> -->
+<!-- 샘플 스크립트 -->
+<script>
+	$('.progree-num').each(function () {
+			$(this).prop('Counter',0).animate({
+				Counter: $(this).text()
+			}, {
+				duration: 3000,
+				easing: 'swing',
+				step: function (now) {
+					$(this).text(Math.ceil(now)+"%")
+				}
+			});
+		});
+</script>
+</body>
+</html>

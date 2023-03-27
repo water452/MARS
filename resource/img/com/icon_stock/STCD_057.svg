@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+    <circle data-name="타원 14594" cx="12" cy="12" r="12" style="fill:#0079c1"/>
+    <g data-name="그룹 628329">
+        <path data-name="패스 1507273" d="M407.384 230.965a.472.472 0 0 0-.473.472v3.309h8.741l-3.98-3.78h-4.288" transform="translate(-397.286 -225.648)" style="fill:#fff"/>
+        <path data-name="패스 1507274" d="M425.6 243.607a.471.471 0 0 0-.472-.472h-3.308v8.74l3.779-3.98v-4.289" transform="translate(-406.918 -233.508)" style="fill:#fff"/>
+        <path data-name="패스 1507275" d="M403.909 261.819a.472.472 0 0 0 .471-.473v-3.308h-8.741l3.98 3.779h4.29" transform="translate(-390.006 -243.135)" style="fill:#fff"/>
+        <path data-name="패스 1507276" d="M394.738 240.131a.471.471 0 0 0 .471.472h3.31v-8.741l-3.781 3.981v4.288" transform="translate(-389.424 -226.228)" style="fill:#fff"/>
+    </g>
+</svg>

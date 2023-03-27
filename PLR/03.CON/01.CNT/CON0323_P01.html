@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>업무요청_[P]확인사항 | 계약변경(배서유형선택) | 자동차</title>
+<link rel="stylesheet" href="../../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../../resource/css/page.css?20220913">
+<script src="../../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../../resource/js/jquery-ui.min.js"></script>
+<script src="../../../resource/js/ui.plugin.js"></script>
+<script src="../../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 팝업 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>확인사항</h1>
+			<button type="button" data-btn="pop-close">확인사항 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container margin">
+			<!-- [CASE] 단기운전자확대특약 가입 23-01-06 추가
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>단기운전자확대특약 가입</strong> 요청 시 미리 확인해주세요.</p>				 
+				<ul class="txt-bul1">
+					<li>운전자한정특약, 연령특약을 선택하실 필요가 없이 기본(누구나), 전 연령으로 자동 계산됩니다.</li>
+					<li>계약변경 일수는 1~31일까지 선택이 가능합니다.<br><i>※</i> 연간 횟수 15회 or 60일 (보험기간 6개월 이하인 경우 7회 or30일) 한도이며, 횟수 or 일수 중 하나라도 충족되는 경우 추후 단기운전자 확대 특약 가입이 불가합니다.</li>
+					<li>계약변경기준일은 현재일 +7일 이내만 가능합니다.</li>
+				</ul>
+			</div>
+			// [CASE] 단기운전자확대특약 가입 23-01-06 추가
+			[CASE] 차량/차대번호 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>차량/차량제조번호(차대번호) 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>등록증상 소유자와 기명피보험자가 동일한가요?</li>
+					<li>사고발생여부 확인(사고발생 건인 경우 반드시 계약변경기준일과 등록일이 동일해야 합니다.</li>
+					<li>필요서류는 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>자동차등록증(또는 등록원부)</li>
+							<li>이륜차 신고필증(또는 이륜차대장)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			[CASE] 차량대체(자동차교체)
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>차량대체(자동차교체) 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>기명피보험자 본인으로 등록할 예정인가요?</li>
+					<li>기존 차량의 양도 또는 폐차완료 여부를 알려주세요.(의무보험 미가입 과태료와 효력상실 안내 필수)</li>
+					<li>사고발생 여부를 알려주세요.(자기차량보장(담보)<br>사고 존재 시 전손처리 여부 확인 필수)</li>
+					<li>보장내용(자기차량 추가 등) 또는 특약변경<br>(운전자 범위 또는 연령 범위 등)을 확인해주세요.</li>
+					<li>차량/차량제조번호(차대번호), 차명코드,<br>추가부속품 등 차량사항을 확인해주세요.</li>
+					<li>차량대체, 보장내용, 특약 등 변경 시<br>발생하는 효력을 안내해주세요.(보장(담보) 변경, 특약변경 시 변경된 내용은 24시부터 효력 발생)</li>
+					<li>필요서류는 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>대체 전 차량 양도/말소 여부 및 대체 후</li>
+							<li>차량정보</li>
+							<li>자동차등록증(또는 제작증) - 선택</li>
+						</ul>
+					</li>
+				</ul>
+
+				<div class="tbl-data1">
+					<table>
+						<caption>구분, 대체 가능한 차종에 관한 표</caption>
+						<colgroup>
+							<col style="width:22%">
+							<col style="width:16%">
+							<col style="width:auto">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" colspan="2">구분</th>
+								<th scope="col">대체 가능한 차종</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2">개인용</td>
+								<td class="left">
+									<em>동일차종간</em>
+									<ul class="data-word4">
+										<li>소형A</li>
+										<li>소형B</li>
+										<li>중형</li>
+										<li>대형</li>
+										<li>다인승1종</li>
+										<li>다인승2종</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="2">업무용</td>
+								<td>개인</td>
+								<td class="left">
+									<em>동일차종간/자가용 승용차간</em>
+									<ul class="data-word4">
+										<li>1종 승합</li>
+										<li>2종 승합</li>
+										<li>3종 승합</li>
+										<li>1종 화물</li>
+										<li>2종 화물</li>
+										<li>3종 화물</li>
+										<li>경승합</li>
+										<li>3종 승합</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>법인</td>
+								<td class="left">
+									<em>동일차종간/자가용 승용차간</em>
+									<ul class="data-word4">
+										<li>2종 화물</li>
+										<li>3종 화물</li>
+										<li>경화물</li>
+										<li>4종 화물</li>
+										<li>경승합</li>
+										<li>3종 승합</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="2">영업용</td>
+								<td>개인</td>
+								<td class="left">
+									<em>동일차종간</em>
+									<ul class="data-word4">
+										<li>개인택시</li>
+										<li>1종 화물</li>
+										<li>2종 화물</li>
+										<li>3종 화물</li>
+										<li>4종 화물</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>법인</td>
+								<td class="left">
+									<em>동일차종간</em>
+									<ul class="data-word4">
+										<li>2종 화물</li>
+										<li>3종 화물</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			[CASE] 차량사향(부속품추가)등 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>차량사항(부속품추가 등) 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>사고발생 여부를 확인해주세요.</li>
+					<li>차명코드 적용 착오로 인한 변경 및 추가부속품 누락, 추가 여부를 확인해주세요.</li>
+					<li>일부 부속품의 추가 제한을 안내해주세요.(자연소모성, 정부보조금 지원 장비 및 불명확한 부속품<br>예: 유리막코팅, 선팅, 매연저감장치(DPF) 등)</li>
+					<li>필요서류는 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>자동차등록증(또는 등록원부)</li>
+							<li>제작증 또는 견적서(부속품 내역포함)</li>
+							<li>차량사진</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			[CASE] 연령/운전한정 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>연령/운전한정 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>보험종료일(만기)일까지 변경하는 게 맞는지 확인해주세요.(단기운전자 가입 여부 확인)</li>
+					<li>최연소/지정운전자의 경우 생년월일 확인은 필수입니다.<br>(연령착오가입에 따른 보상처리 시 불이익이 생길 수 있습니다.)</li>
+					<li>사고발생 여부를 확인해주세요.</li>
+					<li>필요서류는 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>자동차등록증(또는 등록원부)</li>
+							<li>제작증 또는 견적서(부속품 내역포함)</li>
+							<li>차량사진</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			[CASE] 기타특약 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>기타특약(주행, 자녀 등) 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>추가하고자 하는 기타특약을 확인해주세요.<br>(예: 자녀할인, 희망나눔, 시니어 교통안전 교육이수할인 등)</li>
+					<li>필요서류를 확인해주세요.(특약별 첨부서류 다름)</li>
+				</ul>
+			</div>
+
+			[CASE] 담보(추가/가입금액) 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>{보장(담보)(추가/가입금액)} 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>사고발생 여부를 확인해주세요.</li>
+					<li>실손보장(담보)중복가입 동의 대상 여부를 확인해주세요.</li>
+					<li>자기차량보장(담보) 추가 시 차명, 추가부속 등을 확인해주세요.(자기차량 사진촬영 대상 여부 확인)</li>
+					<li>필요서류는 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>실손보장(담보)중복가입동의서</li>
+							<li>자기차량 사진(8매)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			[CASE] 가입자경력인정자 변경
+			<div class="wrap-section1">
+				2023-01-17 변경
+				<p class="mes-t3"><strong>가입경력인정자 추가</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li><em>가입경력인정자 등록대상 여부를 확인해주세요.<br>(운전범위, 연령한정 범위 내에서 지정가능)</em>
+						<p class="txt-bul4">2016.10.01 책임개시 후 2명/2016.10.01<br>책임개시전 1명 지정 가능<br>(제도시행일:  2013.09.01)</p>
+					</li>
+					<li>추가하고자 하는 가입경력인정자가 가입설계동의가 되어있는지 확인해주세요.(가입설계동의 필수)</li>
+				</ul>
+				//2023-01-17 변경
+			</div>
+
+			[CASE] 정산배서 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>정산배서 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>주행거리 최종사진(계기판사진, 차량 전면사진)을 정상적으로 등록하였는지 확인해주세요.</li>
+					<li>주행거리 사진검증이 완료되었는지 확인해주세요.</li>
+				</ul>
+			</div>
+
+			[CASE] 기타(변경배서) 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>기타(직접입력)</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>변경하고자 하는 내용을 정확히 기재해주세요.<br>예) 연령/운전한정 변경요청인 경우
+						<ul class="txt-bul2">
+							<li>계약변경기준일: 2022.05.10(화) (변경 후)</li>
+							<li>연령/운전한정: 만26세 이상, 부부및자녀한정<br>(최연소운전자: 자녀/홍길동/1997.05.10)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			[CASE] 기타(해지배서) 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>해지 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>사고발생 여부를 확인해주세요.<br><i>※</i> 사고보장(담보)의 경우 해약환급금은 발생하지 않습니다.</li>
+					<li>종합보험 임의해지의 경우 해지하고자 하는 보장(담보)을 정확히 기재해주세요.<br><i>※</i> 의무보험은 임의해지 처리가 불가능합니다.</li>
+					<li>중복계약해지의 경우 롯데손해보험/다른 보험사 가입서류(보험증권, 가입증명서 등)가 정상적으로 등록되었는지 확인해주세요.</li>
+				</ul>
+			</div>
+
+			[CASE] 기타(취소배서) 변경
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>취소배서 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>신규가입 이후 변경이나 계약변경(금액 발생 있음)이 있는지 확인해주세요.</li>
+					<li>사고발생 여부 확인해주세요.</li>
+				</ul>
+			</div>
+
+			[CASE] 가입경력인정자 변경시 노출
+			<div class="area-action" data-sticky="bottom">
+				<button type="button" class="btn-action c1">가입설계동의</button>
+			</div> -->
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>기타 계약 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>변경하고자 하는 내용을 정확히 기재해주세요.<br>예) 연령/운전한정을 변경요청 하는 경우
+						<ul class="txt-bul2">
+							<li>배서기준일: 2022.05.10(화)</li>
+							<li>변경 후 연령, 운전한정:만26세이상, 부부 및 자녀한정<br>(최저운전자 : 자녀 / 홍길동 / 1997.05.10)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>단기운전자확대특약 가입</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>운전자한정특약, 연령특약을 선택하실 필요가 없이 기본(누구나), 전 연령으로 자동 계산되어요.</li>
+					<li>계약변경 일수는 1~31일까지 선택이 가능해요.
+						<ul class="txt-bul4">
+							<li>연간 횟수 15회 or 60일 (보험기간 6개월 이하인 경우 7회 or30일) 한도이며, 횟수 or 일수 중 하나라도 충족되는 경우 추후 단기운전자 확대 특약 가입 불가해요.</li>
+						</ul>
+					</li>
+					<li>계약변경기준일은 현재일 +7일 이내만 가능해요.</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>연령/운전한정 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>보험종료일(만기)까지 변경하는 게 맞는지 확인해주세요.<br>(특정기간만 변경할 경우 단기운전자확대특약으로 가입)</li>
+					<li>운전자 정보(배우자/최저/지정운전자)는 성명, 생년월일을 확인해주세요.<br>(연령착오 가입에 따른 보상처리시 불이익이 생길 수 있어요)</li>
+					<li>계약변경일(현재일)기준 사고가 발생하였나요?</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>가입경력인정자 추가</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>가입경력인정자 등록대상 여부를 확인해주세요.<br>(운전범위, 연령한정 범위내에서 지정가능)
+						<ul class="txt-bul4">
+							<li>2016.10.01 책임개시 후 2명/<br>2016.10.01 책임개시 전 1명 지정 가능<br>(제도시행일:  2013.09.01)</li>
+						</ul>
+					</li>
+					<li>추가하고자 하는 가입경력인정자가 가입설계동의가 되어있는지 확인해주세요. (가입설계동의 필수)</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>차량번호 (확정/변경)</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>등록증상 소유자와 기명피보험자가 동일한가요?</li>
+					<li>계약변경기준일(현재일) 이전 자동차 보험사고가 발생하였나요?<br>(사고 발생 건 인 경우 반드시 배서기준일은 자동차등록증상 등록일자로 지정해주세요.)</li>
+					<li>필요서류는 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>자동차등록증(또는 등록원부)</li>
+							<li>이륜차 신고필증(또는 이륜차대장)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>담보(추가,가입금액) 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>계약변경일(현재일)기준 사고가 발생하였나요?</li>
+					<li>추가하고자 하는 담보에 따라 실손보장(담보)중복가입 동의가 필요할 수도 있어요.</li>
+					<li>자기차량보장(담보) 추가 시 차명, 추가부속 등을 확인해주세요.<br>(자기차량 사진이 필요할 경우 요청할 수도 있어요.)</li>
+					<li>필요서류는 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>실손보장(담보)중복가입동의서</li>
+							<li>자기차량 사진(8매)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>차량대체(교체) 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>기명피보험자 본인으로 등록할 예정인가요?</li>
+					<li>기존차량은 양도나 폐차 되었나요?<br>(의무보험 미가입 과태료와 효력상실 안내 필수)</li>
+					<li>계약변경기준일(현재일) 기준 사고가 발생하였나요?<br>(자차담보 사고 존재시 전손처리여부 확인 필수)</li>
+					<li>보장내용(자차추가 등) or 특약 (운전자범위 or 연령범위 등)을  변경사항이 있는지 확인하셨나요?</li>
+					<li>대체할 차량에 대하여  확인하셨나요?<br>(차량/차대번호, 차명코드, 추가부속품 등)</li>
+					<li>차량대체, 보장내용, 특약 등 변경 시 효력발생시점이 다른 점을 고객에게 안내해주세요.</li>
+				</ul>
+				<div class="tbl-data1 line">
+					<table>
+						<caption>구분, 대체 가능한 차종에 관한 표</caption>
+						<colgroup>
+							<col style="width:13%">
+							<col style="width:13%">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" colspan="2">구분</th>
+								<th scope="col">대체 가능한 차종</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2">개인용</td>
+								<td class="left">
+									<em class="bul-type">동일차종간</em>
+									<ul class="data-word4 bul-type">
+										<li>소형A</li>
+										<li>소형B</li>
+										<li>중형</li>
+										<li>대형</li>
+										<li>다인승1종</li>
+										<li>다인승2종</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="2">업무용</td>
+								<td>개인</td>
+								<td class="left">
+									<em class="bul-type">동일차종간/자가용 승용차간</em>
+									<!-- 2023-02-24 변경 -->
+									<ul class="data-word4 bul-type">
+										<li>1종 승합</li>
+										<li>2종 승합</li>
+										<li>3종 승합</li>
+									</ul>
+									<ul class="data-word4 bul-type">
+										<li>1종 화물</li>
+										<li>2종 화물</li>
+										<li>3종 화물</li>
+									</ul>
+									<ul class="data-word4 bul-type">
+										<li>경승합</li>
+										<li>3종 승합</li>
+									</ul>
+									<ul class="data-word4 bul-type">
+										<li>경화물</li>
+										<li>4종 화물</li>
+									</ul>
+									<!-- //2023-02-24 변경 -->
+								</td>
+							</tr>
+							<tr>
+								<td>법인</td>
+								<td class="left">
+									<em class="bul-type">동일차종간/자가용 승용차간</em>
+									<!-- 2023-02-24 변경 -->
+									<ul class="data-word4 bul-type">
+										<li>2종 화물</li>
+										<li>3종 화물</li>
+									</ul>
+									<ul class="data-word4 bul-type">
+										<li>경화물</li>
+										<li>4종 화물</li>
+									</ul>
+									<ul class="data-word4 bul-type">
+										<li>경승합</li>
+										<li>3종 승합</li>
+									</ul>
+									<!-- //2023-02-24 변경 -->
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="2">영업용</td>
+								<td>개인</td>
+								<td class="left">
+									<em class="bul-type">동일차종간</em>
+									<ul class="data-word4 bul-type">
+										<li>개인택시</li>
+										<li>1종 화물</li>
+										<li>2종 화물</li>
+										<li>3종 화물</li>
+										<li>4종 화물</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>법인</td>
+								<td class="left">
+									<em class="bul-type">동일차종간</em>
+									<ul class="data-word4 bul-type">
+										<li>2종 화물</li>
+										<li>3종 화물</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>차량사항(부속품추가 등)</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>계약변경일 (현재일) 기준 사고가 발생하였나요?<br>(자차담보 사고 존재시 전손처리여부 확인 필수)</li>
+					<li>차명코드 적용 착오로 인한 변경인지, 추가부속품 누락으로 인한 추가인지 확인해주세요.</li>
+					<li>일부 부속품 추가 제한 안내하세요. (자연소모성, 정부보조금 지원 장비 및 불명확한 부속품<br>예시) 유리막코팅, 선팅, 매연저감장치(DPF)등)</li>
+					<li>필요서류는 확인하셨나요?
+						<ul class="txt-bul2">
+							<li>자동차등록증(또는 등록원부)</li>
+							<li>제작증 또는 견적서 (부속품 내역포함)</li>
+							<li>차량사진</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>해지변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>계약변경일(현재일) 기준 사고가 발생하였나요?<br>(사고담보의 경우 해약환급금은 발생하지 않아요.)</li>
+					<li>종합보험 임의해지의 경우 해지하고자 하는 담보를 정확히 기재해주세요.<br>※ 의무보험은 임의해지 처리가 불가해요.</li>
+					<li>중복계약해지의 경우 당/타사 가입서류(보험증권, 가입증명서 등)가 정상적으로 등록되었는지 확인해주세요.</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>취소배서 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>신규가입 이후 변경/정정배서(금액 발생 有)가 있는지 확인해주세요.</li>
+					<li>계약변경일(현재일) 기준 사고가 발생하였나요?<br>(사고가 발생 한 경우 취소가 불가할 수도 있어요.)</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>정산배서 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>주행거리 최종사진 (계기판사진, 차량 전면사진)을 정상적으로 등록하였나요?</li>
+					<li>주행거리 사진검증이 완료되었나요?</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3"><strong>기타특약(주행, 자녀 등) 변경</strong> 요청 시 미리 확인해주세요.</p>
+				<ul class="txt-bul1">
+					<li>추가하고자 하는 기타특약 (자녀할인, 주행거리할인, 희망나눔 등) 을 정확히 기재해주세요.</li>
+					<li>기타특약별 구비서류 확인하고 관련 서류를 첨부해주세요.</li>
+				</ul>
+			</div>
+
+			<!-- [CASE] 2023-01-17 추가 -->
+			<div class="wrap-section1">
+				<p class="mes-t3 t5"><strong>특약별 구비서류</strong></p>
+				<ul class="txt-bul1">
+					<li>주행거리 특약 : 차량번호판사진, 차량계기판사진(이미지저장)</li>
+					<li>차선이탈방지 특약 : 차량번호판 사진, 차선이탈방지 장치 장착사진(이미지저장)</li>
+					<li>전방충돌방지 특약 : 차량번호판 사진, 전방충돌방지장치 장착사진(이미지저장)</li>
+					<li>자녀할인 특약 :
+						<ul class="mark num">
+							<li><i>①</i>자녀등록 : 가족관계 증명서, 주민등록등본, 의료보험증 中 택 1</li>
+							<li><i>②</i>태아등록 : 임신확인서 등 출산예정일 기재된 서류</li>
+						</ul>
+					</li>
+					<li>시니어 교통안전교육 이수할인 특약 :
+						<ul class="mark num">
+							<li><i>①</i>기초생활수급자 : 기초생활수급자증명서</li>
+							<li><i>②</i>일반저소득자 :
+								<ul class="txt-bul2">
+									<li>소득관계증명서 : 기명피보험자 및 배우자 합산 가계 소득 年 4,000만원 이하</li>
+									<li>기명피보험자 및 부양자녀가 명기된 가족관계증명서 또는 주민등록등본</li>
+									<li>피보험자 만30세이상 & 부양자녀 만20세미만<br>(단, 만 65세 이상의 경우 부양자녀제외)</li>
+									<li>피보험자동차 - 비사업용 1,600CC 이하 승용차 또는 1.5톤 이하의 화물자동차 최초등록일로부터 5년 이상 경과(보유차량이 1대인 경우만 가능)</li>
+								</ul>
+							</li>
+							<li><i>③</i>장애인 (1~3급) :
+								<ul class="txt-bul2">
+									<li>기명피보험자 또는 기명피보험자의 동거가족의 장애인 증명서</li>
+									<li>기명피보험자의 동거가족이 장애인인 경우 기명피보험자의 주민등록등본</li>
+									<li>피보험자동차 : 비사업용 2,000CC 이하 승용차 또는 1.5톤 이하의 화물자동차 최초등록일로부터 5년 이상 경과(보유차량이 1대인 경우만 가능)</li>
+									<li>소득요건 증빙서류</li>
+								</ul>
+							</li>
+							<li><i>④</i>장애인 운송차량가입자 :
+								<ul class="txt-bul2">
+									<li>장애인 운송용 휠체어 리프트나 슬로프가 설치되어 출고되거나 구조 변경된 차량인 사실을 확인할 수 있는 차량등록증</li>
+									<li>소득요건 증빙서류</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>지정대리청구에 관한 특약 :
+						<ul class="mark num">
+							<li><i>①</i>지정시 : 계약변경신청서</li>
+							<li><i>②</i>지정취소시 :
+								<ul class="txt-bul2">
+									<li>지정대리청구인 취소신청서(회사양식)</li>
+									<li>해당 피보험자의 동의서(회사양식)</li>
+									<li>보험계약자 및 해당 피보험자의 신분증</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- // -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+<!-- ################################################### -->
+</body>
+</html>

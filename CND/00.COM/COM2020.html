@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>온보딩</title>
+<link rel="stylesheet" href="../../resource/css/common.css?20220913">
+<link rel="stylesheet" href="../../resource/css/content.css?20220913">
+<link rel="stylesheet" href="../../resource/css/page.css?20220913">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js?20220913"></script>
+</head>
+<body>
+<article class="onboarding cnd">
+    <div class="onboarding_detail">
+        <h1 class="logo_tit">롯데손해보험</h1>
+        <p>
+            <strong>MARS와 함께</strong>
+            <span>보통의 일상이 특별하도록</span>
+            <span>특별한 오늘이 가치있도록</span>
+        </p>
+    </div>
+    <div class="onboarding_slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <strong>Enjoy</strong>
+                <span>차곡차곡 쌓이는 포인트! <br>다양한 즐거움과 함께해요.</span>
+            </div>
+            <div class="swiper-slide slide2">
+                <strong>Study</strong>
+                <span>당신의 발걸음이 무겁지 않도록! <br>개개인 맞춤 정보로 MARS가 함께할게요.</span>
+            </div>
+            <div class="swiper-slide slide3">
+                <strong>Let’s Go!</strong>
+                <span>MARS와 친해질 준비되셨나요? <br>가치 있는 오늘을 함께해요.</span>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="btn_area">
+            <a href="javascript:void(0);">다음</a>
+        </div>
+    </footer>
+</article>
+
+<script>
+    var onboarding = new Swiper(".onboarding_slide", {
+        slidePerView:1,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    $('.btn_area a').on('click', function(e){
+        var parEl = $(this).closest('div');
+        if(parEl.hasClass('trans')){
+            var idx = onboarding.realIndex;
+
+            $('.swiper-button-next').click();
+            if(idx >= 2){
+                e.preventDefault(); // 마지막 슬라이드 시, 이벤트 넣는 곳
+            }
+        } else {
+            $('.onboarding_detail').fadeOut(500);
+            $('.onboarding_slide').fadeIn(500);
+            setTimeout(function(){
+                parEl.addClass('trans');
+            }, 500);
+        }
+    });
+
+    $(document).ready(function(){
+        var winH = $(window).height();
+
+        if(winH < 700){
+            $('.onboarding').addClass('small')
+        }
+    })
+</script>
+</body>
+</html>

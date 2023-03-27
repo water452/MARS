@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="uu47asckrb" x1=".317" y1=".311" x2=".757" y2=".933" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#b8d8f2"/>
+            <stop offset="1" stop-color="#21409a"/>
+        </linearGradient>
+        <linearGradient id="grdjj83iba" x1=".5" x2=".272" y2=".704" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#91c5ea"/>
+            <stop offset="1" stop-color="#21409a"/>
+        </linearGradient>
+        <linearGradient id="o01ot25qec" x1="1" y1=".947" x2=".441" y2=".1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#b8d8f2"/>
+            <stop offset=".305" stop-color="#91c5ea"/>
+            <stop offset=".714" stop-color="#4764ae"/>
+            <stop offset="1" stop-color="#21409a"/>
+        </linearGradient>
+        <linearGradient id="kcejy9z7qd" x1=".242" y1="1.375" x2=".784" y2=".371" xlink:href="#grdjj83iba"/>
+    </defs>
+    <circle cx="12" cy="12" r="12" style="fill:#f0f0f0"/>
+    <g data-name="그룹 628316">
+        <g data-name="그룹 628315">
+            <g data-name="그룹 628313">
+                <path data-name="패스 1507251" d="M408.575 197.225a2.929 2.929 0 0 0 .363 2.285l4.918 7.724h-3.593a1.7 1.7 0 0 1-1.367-.7l-2.682-4.213a1.418 1.418 0 0 1 0-1.4z" transform="translate(-402.03 -188.398)" style="fill:url(#uu47asckrb)"/>
+                <path data-name="패스 1507252" d="M413.381 199.729a1.22 1.22 0 0 0-.053 1.087l-1.661-2.609a2.929 2.929 0 0 1-.363-2.285l.294-.462a1.589 1.589 0 0 1 1.39-.7h3.538z" transform="translate(-404.76 -187.095)" style="fill:url(#grdjj83iba)"/>
+            </g>
+            <g data-name="그룹 628314">
+                <path data-name="패스 1507253" d="M428.341 199.107a2.938 2.938 0 0 0-.363-2.286l-4.918-7.721h3.593a1.7 1.7 0 0 1 1.367.7l2.682 4.214a1.417 1.417 0 0 1 0 1.4z" transform="translate(-411.04 -184.098)" style="fill:url(#o01ot25qec)"/>
+                <path data-name="패스 1507254" d="M426.33 201.046a1.217 1.217 0 0 0 .053-1.087l1.661 2.608a2.937 2.937 0 0 1 .363 2.286l-.295.462a1.588 1.588 0 0 1-1.39.7h-3.537z" transform="translate(-411.106 -189.844)" style="fill:url(#kcejy9z7qd)"/>
+            </g>
+        </g>
+    </g>
+</svg>

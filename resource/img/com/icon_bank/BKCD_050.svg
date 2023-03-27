@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="xwcqrwxrha" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#85c51b"/>
+            <stop offset=".655" stop-color="#16873b"/>
+            <stop offset="1" stop-color="#005745"/>
+        </linearGradient>
+        <clipPath id="luu1fjy9vb">
+            <circle data-name="타원 14590" cx="12" cy="12" r="12" style="fill:#32a03a"/>
+        </clipPath>
+    </defs>
+    <circle data-name="타원 14591" cx="12" cy="12" r="12" style="fill:url(#xwcqrwxrha)"/>
+    <g data-name="마스크 그룹 627746" style="clip-path:url(#luu1fjy9vb)">
+        <g data-name="그룹 628318">
+            <path data-name="패스 1507257" d="M371.156 399.3v2s-3.645-.269-4 2.391c-.192 1.425.669 2.406 1.626 3.33 1.553 1.5 2.916 3.064 1.949 5.8a7.239 7.239 0 0 1-1.9 2.465h-2.749a10.052 10.052 0 0 0 1.545-1.4c.731-.8 1.632-1.828 1.524-3.01-.117-1.282-1.373-1.985-2.229-2.777a5.233 5.233 0 0 1-1.766-4.135s-.334-4.399 6-4.664z" transform="translate(-360.347 -395.347)" style="fill:#fff"/>
+            <path data-name="패스 1507258" d="M391.8 407.955a30.65 30.65 0 0 0-.847-1.042 5.553 5.553 0 0 0 .777-2.869 4.374 4.374 0 0 0-3.706-4.423h-2.749v19.931h1.7v-4.212h1.917a6.569 6.569 0 0 0 1.354-.635 4.955 4.955 0 0 0 1.554-6.75zm-3.838 5.427a4.243 4.243 0 0 1-.864.016v-12.043a2.961 2.961 0 0 1 2.928 2.928 3.692 3.692 0 0 1-1.823 2.929 4.5 4.5 0 0 1 2.357 2.3 3.208 3.208 0 0 1-2.6 3.87z" transform="translate(-373.089 -395.553)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

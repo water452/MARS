@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>ADMIN</title>
+<link rel="stylesheet" href="../resource/css/admin.css?20220913">
+<script type="text/javascript" src="../resource/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../resource/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resource/js/ui.admin.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- ############################## -->
+        <!-- [HEADER] -->
+        <!-- ############################## -->
+        <div id="header"></div>
+        <h2 class="page-title">리포트</h2>
+        <!-- ############################## -->
+        <!-- [CONTAINER] -->
+        <!-- ############################## -->
+        <div id="container">
+            <!-- ### [LNB] ### -->
+            <div class="aside"></div>
+            <!-- ### [CONTENTS] ### -->
+            <div class="contents">
+                컨텐츠 영역입니다
+            </div>
+        </div>
+    </div>
+
+    <!-- ### [PROGRESS BAR] ###-->
+    <div class="progress-bar-position">
+        <div id='bar_color' class='progress-bar' >
+            <div class='progress-bar-bg'>
+                <div class='progress-bar-wrap' style="width:100%"> <!-- width값으로 조절 -->
+                    <div class='progress-bar-progress'>
+                        <div class='progress-bar-overlay-text'>정보를 가지고 오고 있어요.</div>
+                        <div class='progress-bar-overlay-percent'><em class="progree-num">100</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .progress-bar-progress{animation-duration:2s;} /* 게이지 차는 속도 */
+    </style>
+    <script>
+        $('.progree-num').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000, // 숫자 변경되는 속도 (호출시 먼저 선언)
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now)+"%")
+                    }
+                });
+            });
+    </script>
+</body>
+</html>

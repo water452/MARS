@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="6" viewBox="0 0 16 6">
+    <g data-name="&lt;-&gt;">
+        <path data-name="다각형 56" d="M2.5 0 5 4H0z" transform="rotate(-90 3.25 2.25)" style="fill:#666"/>
+        <path data-name="다각형 57" d="M2.5 0 5 4H0z" transform="rotate(90 7.25 7.75)" style="fill:#666"/>
+        <path data-name="선 1" transform="translate(5 3)" style="fill:none;stroke:#666" d="M0 0h6"/>
+    </g>
+</svg>

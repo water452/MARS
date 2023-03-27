@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>설치가이드</title>
+<link rel="stylesheet" href="../../resource/css/common.css">
+<link rel="stylesheet" href="../../resource/css/content.css">
+<link rel="stylesheet" href="../../resource/css/page_cnd.css">
+<script src="../../resource/js/jquery-3.2.1.min.js"></script>
+<script src="../../resource/js/jquery-ui.min.js"></script>
+<script src="../../resource/js/ui.plugin.js"></script>
+<script src="../../resource/js/ui.common.js"></script>
+<script src="../../resource/js/ui.common.cnd.js"></script>
+<!--
+	**************************************************************************
+	*	수정일			수정내역
+	*	-------------- 	------------------------------------------------------
+	*	[M 2022-10-06]	1. 약관 내용 전체 변경
+	**************************************************************************
+-->
+</head>
+<body>
+<!-- ################################################### -->
+<!-- ### [전체팝업] : 모달팝업으로 변경 시 참고사항 ### -->
+<!-- ### [D] main태그 위에 위치 ### -->
+<!-- ### [D] data-popmodal="true" 속성 추가 : 모달팝업으로 인식 ### -->
+<!-- ### [D] 오픈시 클래스명(load) 추가 ### -->
+<!-- ### [D] 팝업오픈샘플페이지 : layout_sample.html ### -->
+<!-- ################################################### -->
+<div class="popup-wrapper">
+	<article>
+		<!-- -------------------------------------- -->
+		<!-- # [HEADER] 페이지 타이틀 -->
+		<!-- -------------------------------------- -->
+		<header class="header">
+			<h1>원가드 앱 설치</h1>
+			<button type="button" data-btn="pop-close">원가드 앱 설치 닫기</button>
+		</header>
+
+		<!-- -------------------------------------- -->
+		<!-- # [CONTAINER] 컨텐츠 -->
+		<!-- -------------------------------------- -->
+		<div class="container etc">
+            <div class="step-txt-type">
+                <div class="type-head">
+                    <strong class="round-box">STEP 3</strong>
+                    <h2 class="step-tit big">영업지원앱 설치 후, 보안 모듈을 설치하면 바로 사용하실 수 있어요.</h2>
+                </div>
+
+                <!-- s: iOS -->
+                <div class="type-body">
+                    <ol>
+                        <li>
+                            <strong>1. 원가드 설치 바로가기 (설정 전)</strong>
+                            <span>영업지원 앱 로그인 완료 후 등장하는 원가드 설치를 진행해주세요.</span>
+                            <p class="imgs etc"><img src="../../resource/img/cnd/intro/img_ios_one_01.png" alt=""></p>
+                            <p class="subs">원가드 앱이 설치되어 있을 때는 등장하지 않아요.</p>
+                            <p class="subs">허용 버튼을 누르면 프로파일이 다운로드돼요. <br>닫기 버튼을 누르고 설정으로 이동해주세요.</p>
+                        </li>
+                        <li>
+                            <strong>2. 설정선택</strong>
+                            <span>설정 >일반 에서 신뢰 등록을 진행해주세요.</span>
+                            <p class="imgs"><img src="../../resource/img/cnd/intro/img_ios_one_02.png" alt=""></p>
+                            <span>Vpn 및 기기관리에서 MDM Profile을 선택해주세요.</span>
+                            <p class="imgs"><img src="../../resource/img/cnd/intro/img_ios_one_03.png" alt=""></p>
+                            <p class="subs">설치 버튼을 누르고 암호를 입력해 신뢰 등록을 진행해주세요.</p>
+                            <p class="imgs etc"><img src="../../resource/img/cnd/intro/img_ios_one_04.png" alt=""></p>
+                        </li>
+                        <li>
+                            <strong>3. 원가드 설치 바로가기 (설정 후)</strong>
+                            <span>완료 버튼을 눌러 설치를 진행해주세요.</span>
+                            <p class="imgs etc"><img src="../../resource/img/cnd/intro/img_ios_one_05.png" alt=""></p>
+                            <span>완료 버튼을 누른 뒤, <em>홈 화면으로 이동하면</em> <br>홈화면에 팝업이 뜨고 앱 설치에 대한 팝업이 등장해요. <br>설치 버튼을 눌러 원가드 설치를 진행해주세요.</span>
+                        </li>
+                        <li>
+                            <strong>4. 약관동의 및 로그인하기</strong>
+                            <span>약관에 동의 후 로그인해주세요.</span>
+                            <p class="imgs"><img src="../../resource/img/cnd/intro/img_ios_one_06.png" alt=""></p>
+                            <p class="subs">원가드 설치 완료 후 정책이 활성화되면 <br>홈화면에서 영업지원 앱을 실행해주세요.</p>
+                        </li>
+                    </ol>
+                </div>
+                <!-- e: iOS -->
+            </div>
+
+			<!-- ######################### -->
+			<!-- [하단영역] 액션버튼 -->
+			<!-- ######################### -->
+			<div class="area-action" data-sticky="content-bottom">
+				<button type="button" class="btn-action c1">영업지원앱 설치확인</button>
+			</div>
+			<!-- ######################### -->
+		</div>
+		<!-- -------------------------------------- -->
+	</article>
+</div>
+</body>
+</html>
