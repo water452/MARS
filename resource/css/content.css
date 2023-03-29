@@ -8842,6 +8842,7 @@ hr.linear{margin:3.2rem -2rem 3.2rem 0;border:0 none;border-top:0.1rem solid #e6
 .step-txt-type .type-body ol li > * + *{display:block;margin-top:2.4rem;}
 .step-txt-type .type-body ol li .subs + .subs{margin-top:0.4rem;}
 .step-txt-type .type-body .imgs{padding:0 1.8rem;}
+.step-txt-type .type-body .imgs img{display:block;}
 .step-txt-type .type-body .imgs.etc{padding:0;}
 .step-txt-type .type-body .subs{position:relative;font-size:1.3rem;color:#666;line-height:2rem;padding-left:1.2rem;}
 .step-txt-type .type-body .subs:before{display:block;content:'';position:absolute;top:0.8rem;left:0;width:0.4rem;height:0.4rem;background:#ddd;border-radius:100%;}
