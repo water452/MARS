@@ -47,20 +47,20 @@
     </div>
 
     <style>
-        .progress-bar-progress{animation-duration:2s;} /* 게이지 차는 속도 */
+        .progress-bar-progress{animation-duration:12s;} /* 게이지 차는 속도 */
     </style>
     <script>
         $('.progree-num').each(function () {
-                $(this).prop('Counter',0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 2000, // 숫자 변경되는 속도 (호출시 먼저 선언)
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now)+"%")
-                    }
-                });
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 12000, // 숫자 변경되는 속도 (호출시 먼저 선언)
+                easing: 'linear',
+                step: function (now) {
+                    $(this).text(Math.ceil(now)+"%")
+                }
             });
+        });
     </script>
 </body>
 </html>
